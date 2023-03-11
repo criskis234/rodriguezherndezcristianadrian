@@ -1,0 +1,38 @@
+class program {
+   define turnright(){
+   iterate(3){
+   turnleft();
+   }
+   }
+   define go() {
+   putbeeper();
+   move();
+   putbeeper();
+   move();
+   putbeeper();
+   move();
+   putbeeper();
+   }
+   define giraderecha(){
+   turnright();
+   move();
+   turnright();
+   }
+   define giraizquierda(){
+   turnleft();
+   move();
+   turnleft();
+   }
+   program () {
+   go();
+   giraderecha();
+   go();
+   giraizquierda();
+   go();
+   giraderecha();
+   go();
+   giraizquierda();
+   go();
+        turnoff();
+    }
+}

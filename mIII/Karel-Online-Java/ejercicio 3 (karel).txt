@@ -1,0 +1,14 @@
+class program {
+    program () {
+    if(facingNorth){
+        turnoff();
+        }
+       iterate(3){
+       if(notFacingNorth){
+        turnleft();
+         turnleft();
+          turnleft();
+          }
+          }
+    }
+}

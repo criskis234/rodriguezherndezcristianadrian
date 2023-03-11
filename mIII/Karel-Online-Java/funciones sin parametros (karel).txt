@@ -1,0 +1,11 @@
+class program {
+void turnringht() {
+   iterate(3) {
+      turnleft();
+   }
+}
+    program () {
+    turnringht();
+        turnoff();
+    }
+}
