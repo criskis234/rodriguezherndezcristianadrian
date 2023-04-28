@@ -1,0 +1,22 @@
+class program {
+  define turnright(){
+  iterate (3){
+  turnleft();
+  }
+  }
+  define agarrale(){
+  iterate(6){
+  move();
+  }
+  turnright();
+  iterate(4){
+  pickbeeper();
+  move();
+  }
+  pickbeeper();
+  }
+  program () {  
+  agarrale(); 
+        turnoff();
+    }
+}

@@ -1,0 +1,13 @@
+class program {
+   define go(){
+   if(anyBeepersInBeeperBag){
+   putbeeper();
+   move();
+   go();
+   }
+   }
+   program () {  
+   go();
+        turnoff();
+    }
+}

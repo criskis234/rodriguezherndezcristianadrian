@@ -1,0 +1,50 @@
+class program {
+   define turnright(){
+   iterate(3){
+   turnleft();
+   }
+   }
+   define put3beepers(){
+   iterate(3){
+   putbeeper();
+   }
+   }
+   define put2beepers(){
+   iterate(2){
+   putbeeper();
+   }
+   }
+   define mueveteygira2(){
+   iterate(2){
+   put2beepers();
+   move();
+   }
+   turnright();
+   }
+   define mueveteygira(){
+   iterate(4){
+   move();
+   put3beepers();
+   }
+   turnright();
+   }
+    program () {
+    move();
+    iterate(4){
+    mueveteygira();
+   }
+    move();
+    turnright();
+    move();
+    turnleft();
+    iterate(4){
+    mueveteygira2();
+    }
+    move();
+    turnright();
+    move();
+    putbeeper();
+    turnleft();
+        turnoff();
+    }
+}
