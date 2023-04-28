@@ -1,0 +1,36 @@
+button{
+	background-color:#4741FA;
+ 	color: white;
+ 	border:none;
+    padding-top: 12px;
+   padding-bottom: 12px;
+   padding-left: 16px;
+   padding-right: 16px;
+   border-radius: 12px;
+   cursor: pointer;
+   width: 300px;
+}
+.frist-name{
+	width: 148px;
+}
+.last-name{
+	width: 148px;
+}
+
+.email{
+	display:block;
+	width: 300px;
+}
+
+input {
+	border-width:1px ;
+	border-style: solid;
+	border-color: rgb(200, 200, 200);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 16px;
+	border-radius: 8px;
+	margin-bottom: 12px;
+}

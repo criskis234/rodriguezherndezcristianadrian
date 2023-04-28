@@ -1,0 +1,25 @@
+p{
+	font-family: arial;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.p{
+	width: 300px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color:rgb(33, 33, 33);
+}
+.title{
+	color: white;
+	padding-bottom: 15px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.subtitle{
+	color: rgb(160, 160, 160);
+	padding-bottom: 12px;
+}

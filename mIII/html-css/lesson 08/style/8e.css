@@ -1,0 +1,46 @@
+p{
+	font-family: arial;
+}
+.title{
+	font-size: 40px;
+	margin-bottom: 25px;
+
+}
+ input{
+ 	display: block;
+	border-width:1px ;
+	border-style: solid;
+	border-color: rgb(200, 200, 200);
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-size: 16px;
+	border-radius: 8px;
+	margin-bottom: 12px;
+}
+.destination{
+	margin-bottom: 35px;
+}
+
+.request{
+	background-color: black;
+	color: white;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 16px;
+	margin-right: 20px;
+}
+
+.later{
+	background-color: rgb(240, 240, 24);
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 16px;
+}
