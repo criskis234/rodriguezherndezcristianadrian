@@ -1,0 +1,14 @@
+class program {
+    program () {
+    iterate(7){
+    turnleft();
+    turnleft();
+    turnleft();
+    move();
+    turnleft();
+    move();
+    pickbeeper();
+   }
+        turnoff();
+    }
+}

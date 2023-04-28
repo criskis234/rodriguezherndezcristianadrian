@@ -1,0 +1,37 @@
+class program {
+define turnright(){
+iterate(3){
+turnleft();
+}
+}
+define turnarround(){
+turnleft();
+turnleft();
+}
+define recojezumbadores(){
+if(nextToABeeper){
+pickbeeper();
+move();
+recojezumbadores();
+if(notFacingSouth){
+turnarround();
+while(frontIsClear)
+move();
+}
+putbeeper();
+}
+}
+define cambiarcarril(){
+turnleft();
+move();
+turnleft();
+}
+    program () {
+    while(nextToABeeper)
+    {
+        recojezumbadores();
+        cambiarcarril();
+        }
+        turnoff();
+    }
+}

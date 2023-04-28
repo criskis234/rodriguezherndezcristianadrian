@@ -1,0 +1,69 @@
+class program{
+define ve(){
+while(notFacingNorth)
+turnleft();
+}
+define turnright(){
+iterate(3)
+turnleft();
+}
+define contar(n){
+if(notFacingSouth){
+if(rightIsClear && facingNorth){
+turnright ();
+move();
+contar(n);
+}
+else if(frontIsClear && rightIsClear && leftIsClear){
+turnright ();
+contar(n);
+}
+if(rightIsBlocked && leftIsBlocked && (frontIsBlocked || frontIsClear)){
+if(frontIsClear ){
+while(frontIsClear)
+move();
+}
+ if( frontIsBlocked){
+turnleft();
+turnleft();
+while(frontIsClear && rightIsBlocked) {
+move();
+}
+if(rightIsClear){
+turnright ();
+move();
+contar (succ(n));
+}
+}
+}
+if(frontIsBlocked && rightIsBlocked && facingNorth){
+turnleft();
+while(frontIsClear && rightIsBlocked) {
+move();
+}
+if(rightIsClear){
+turnright ();
+move();
+contar (succ(n));
+}
+}
+if(rightIsBlocked && facingNorth){
+move();
+contar (succ(n));
+}
+if(frontIsClear && rightIsBlocked && leftIsClear){
+move();
+contar(n);
+}
+}
+else{
+iterate(n)
+move();
+}
+}
+program(){
+ve();
+contar(0);
+turnoff();
+}
+}

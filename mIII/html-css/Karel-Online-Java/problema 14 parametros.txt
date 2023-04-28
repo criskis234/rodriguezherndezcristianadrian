@@ -1,0 +1,16 @@
+class program {
+ void recursiva(n){
+ if(anyBeepersInBeeperBag){
+ putbeeper();
+ recursiva(succ(n));
+ }
+ else{
+ iterate(n)
+ move();
+ }
+ }
+    program () {  
+    recursiva(0);
+        turnoff();
+    }
+}

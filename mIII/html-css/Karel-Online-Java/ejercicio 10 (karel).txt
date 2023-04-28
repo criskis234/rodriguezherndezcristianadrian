@@ -1,0 +1,37 @@
+//Ejercicio 10: Escribe una nueva instrucción que 
+//reciba un número n y mueva a Karel n + 2 veces 
+//(validando el choque contra paredes), y posteriormente,
+//coloque n - 2 zumbadores en la posición en donde está.
+//PISTA: Usa un iterate para mover a Karel y otro para 
+//colocar los zumbadores. NO se vale colocar instrucciones
+//fuera de los ciclos iterate.
+class program {
+       void turnringht(){
+       turnleft();
+       turnleft();
+       turnleft();
+       }
+       void muevaColoque(i){
+        iterate( succ(succ(i))  ){
+         if(frontIsBlocked){
+        turnleft();
+        move();
+       turnringht();
+       move();
+       turnringht();
+       move();
+       turnleft();
+       }
+       else{
+       move();
+       }
+         }
+       iterate( pred(pred(i)) ) {
+   putbeeper();
+         }
+         }
+          program () {
+          muevaColoque(5);
+        turnoff();
+    }
+}

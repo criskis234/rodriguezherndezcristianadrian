@@ -1,0 +1,13 @@
+class program {
+ void recursiva(){
+ if(frontIsClear){
+ move();
+ recursiva();
+putbeeper();
+ }
+ }
+    program () {  
+    recursiva();
+        turnoff();
+    }
+}

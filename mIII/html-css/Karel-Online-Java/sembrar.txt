@@ -1,0 +1,107 @@
+class program {
+    define turnright(){
+    iterate(3){
+    turnleft();
+    }
+    }
+    define turnarround(){
+    iterate(2){
+    turnleft();
+    }
+    }
+    define carrots(){
+    turnright();
+    move();
+    while(nextToABeeper){
+    pickbeeper();
+    }
+    turnarround();
+    }
+    define meter(){
+    if(rightIsBlocked ){
+    move();
+    meter();
+    }
+    if(rightIsClear){
+    turnright();
+    }
+    if(frontIsClear){
+    move();
+    }
+    if(frontIsBlocked && rightIsBlocked){
+    turnarround();
+    }
+    }
+    define salir(){
+   if(facingEast&&leftIsBlocked&&anyBeepersInBeeperBag){
+    putbeeper();
+    salir();
+    }
+    if(facingEast&&leftIsBlocked&&noBeepersInBeeperBag){
+     turnoff();
+    }
+    if(frontIsClear && leftIsBlocked){
+    move();
+    salir();
+    }
+    if(leftIsClear){
+    turnleft();
+    move();
+    salir();
+    }
+    }
+    
+     define go() {
+    if(notNextToABeeper){
+   putbeeper();
+   go();
+   }
+   if(nextToABeeper&&frontIsClear){
+   move();
+   go();
+   }
+   if(frontIsBlocked && facingNorth && rightIsBlocked){
+    turnarround();
+    go();
+    }
+    if(frontIsBlocked && facingSouth && leftIsBlocked){
+    turnright();
+    go();
+    }
+    if(frontIsBlocked && facingNorth){
+   giraderecha();
+   go();
+   }
+   if(frontIsBlocked && facingSouth){
+   giraizquierda();
+   go();
+   }
+   if(notNextToABeeper){
+   move();
+   go();
+   }
+    }
+   define giraderecha(){
+   turnright();
+   move();
+   turnright();
+   }
+   define giraizquierda(){
+   turnleft();
+   move();
+   turnleft();
+   }
+    
+    
+    program () {
+       carrots();
+       move();
+       turnright();
+       move();
+       meter();
+       go();
+       turnright();
+       salir();
+        turnoff();
+    }
+}

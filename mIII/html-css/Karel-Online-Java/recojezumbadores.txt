@@ -1,0 +1,60 @@
+class program {
+   define turnright(){
+   iterate(3){
+   turnleft();
+   }
+   }
+   define turnarround(){
+   iterate(2){
+   turnleft();
+   }
+   }
+   define go() {
+   if(anyBeepersInBeeperBag && frontIsBlocked && facingWest && leftIsBlocked){
+    putbeeper();
+    go();
+    }
+    if(frontIsBlocked && facingWest && leftIsBlocked){
+    turnoff();
+    }
+    if(nextToABeeper){
+   pickbeeper();
+   go();
+   }
+   if(frontIsBlocked && facingNorth && rightIsBlocked){
+    turnarround();
+    go();
+    }
+    if(frontIsBlocked && facingSouth && leftIsBlocked){
+    turnright();
+    go();
+    }
+    if(frontIsBlocked && facingNorth){
+   giraderecha();
+   go();
+   }
+   if(frontIsBlocked && facingSouth){
+   giraizquierda();
+   go();
+   }
+   if(notNextToABeeper){
+   move();
+   go();
+   }
+   }
+   define giraderecha(){
+   turnright();
+   move();
+   turnright();
+   }
+   define giraizquierda(){
+   turnleft();
+   move();
+   turnleft();
+   }
+   program () {
+     go();
+     giraizquierda();
+        turnoff();
+    }
+}
